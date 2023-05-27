@@ -1,0 +1,25 @@
+<div class="center-items">
+  <h1>List of Characters</h1>
+  <div>
+    <table *ngIf="chars$ | async as chars">
+      <tr
+        *ngFor="let c of chars; let i = index"
+        class="chartable"
+        (click)="checkChar(i)"
+        #charId
+      >
+        {{
+          c.name
+        }}
+      </tr>
+    </table>
+    <button
+      type="button"
+      style="margin-right: 65px; margin-top: 10px"
+      (click)="prevPage()"
+    >
+      Previous
+    </button>
+    <button type="button" (click)="nextPage()">Next</button>
+  </div>
+</div>

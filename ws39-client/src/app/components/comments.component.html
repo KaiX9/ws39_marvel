@@ -1,0 +1,18 @@
+<div class="center-items">
+  <div>
+    <h2>Comments - {{ character.name }}</h2>
+  </div>
+  <div>
+    <textarea
+      name="comments"
+      cols="40"
+      rows="10"
+      #comments
+      placeholder="Type here"
+    ></textarea>
+  </div>
+  <div class="flex-container">
+    <button type="button" (click)="back()">Cancel</button>
+    <button type="button" (click)="postComments()">Post</button>
+  </div>
+</div>

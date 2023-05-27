@@ -1,0 +1,5 @@
+.center-items {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

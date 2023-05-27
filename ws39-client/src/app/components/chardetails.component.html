@@ -1,0 +1,27 @@
+<div class="center-items">
+  <div>
+    <img [src]="character.imagePath" width="300" />
+  </div>
+  <div class="flex-container">
+    <h2>{{ character.name }}</h2>
+    <button type="button" (click)="inputComment()">Comment</button>
+  </div>
+  <div>
+    <button type="button" [routerLink]="['/']">Back</button>
+  </div>
+  <div class="description">
+    <p>{{ character.description }}</p>
+  </div>
+  <div>
+    <h4><u>Comments</u></h4>
+    <ul *ngIf="commentsList.length > 0 else emptyList">
+        <li *ngFor="let c of commentsList">
+            {{ c.comment }}
+        </li>
+    </ul>
+  </div>
+</div>
+
+<ng-template #emptyList>
+    <h3>No Comments Yet</h3>
+</ng-template>
